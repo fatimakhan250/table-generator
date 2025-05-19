@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>table generator</title>
+</head>
+<body>
+    
+    <h2>TABLES</h2>
+    <input type="text" id="generatortable" placeholder="enter table number">
+    <button onclick="generatetable()">generate</button>
+    <ul id="listTable"></ul>
+
+
+    <script>
+      
+      function generatetable(){
+        const num =document.getElementById("generatortable").value;
+        const list= document.getElementById("listTable");
+        list.innerHTML="";
+
+
+        for(a=1; a<=10; a++){
+ 
+            const li = document.createElement("li");
+            li.textContent=`${num} * ${a}= ${num*a}`;
+            list.appendChild(li);
+        }
+      }
+    </script>
+</body>
+</html>
